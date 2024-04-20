@@ -9,7 +9,7 @@ Aquí he repasado y aprendido:
 
   -Extensión que traduce el código declarativo desde un lenguaje tipo XML. 
   
-  -Ejemplo: "<Menu><MenuItem></MenuItem><MenuItem></MenuItem></Menu>", esto lo traduce en React.createElement... 
+  -Ejemplo: <code>&lt;Menu&gt;&lt;MenuItem&gt;&lt;/MenuItem&gt;&lt;MenuItem&gt;&lt;/MenuItem&gt;&lt;/Menu&gt;</code>, esto lo traduce en React.createElement... 
   
   -SWC herramienta online donde se puede ver cómo lo traduce.
   
