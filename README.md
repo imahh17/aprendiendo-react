@@ -6,7 +6,7 @@
   <li>React se puede utilizar para ejecutar/renderizar código tanto en cliente (CSR) como en servidor (SSR).</li>
   <ul>
     <li>React utiliza código declarativo (vas declarando qué es lo que quieres que el códido haga), mientras que JS Vanilla es más "código imperativo" (tienes que especificar y "forzar" mucho más lo que quieres hacer).</li>
-    <li>Reactividad, asincronía y renderizado selectivo (solo actualiza el elemento/s o componente/s del DOM sobre los que hay un cambio de estado, propiedades...</li>
+    <li>Reactividad, asincronía y renderizado selectivo (solo actualiza el elemento/s o componente/s del DOM sobre los que hay un cambio de estado, propiedades...)</li>
   </ul>
   <li>React utilizando JSX:</li>
   <ul>
@@ -27,9 +27,12 @@
   </ul>
 </ul>
 
-<h2>Algunos de los pasos que he seguido: </h2>
+<h2>Algunos de los pasos que he seguido para crear proyecto: </h2>
 <ul>
-    <li></li>
+    <li>npm init -y -> Inicializa el proyecto y crea package.json.</li>
+    <li>Creamos la carpeta Projects y nos posicionamos dentro.</li>
+    <li>npm create vite@latest: crea el marco de trabajo Vite, especificamos el nombre del proyecto (XX-project-name), seleccionamos el framework React, seleccionamos el lenguaje base: Javascript + SWC.</li>
+    <li>Entramos en la carpeta del proyecto, npm install, npm run dev para lanzar.</li>
 </ul>
 
 
