@@ -6,10 +6,10 @@ import { checkWinner, checkEndGame } from './logic/board.js'
 import { WinnerModal } from './components/WinnerModal.jsx'
 import './App.css'
 
-function App() {
+function App () {
   const [board, setBoard] = useState(() => {
-    //Si tenemos un board guardado en la memoria localStorage,
-    //nos muestra la partida guardada, si no de partida de cero.
+    // Si tenemos un board guardado en la memoria localStorage,
+    // nos muestra la partida guardada, si no de partida de cero.
     const boardFromStorage = window.localStorage.getItem('board')
     return boardFromStorage ? JSON.parse(boardFromStorage) : Array(9).fill(null)
   })
@@ -25,43 +25,43 @@ function App() {
     setTurn(TURNS.X)
     setWinner(null)
 
-    //Borramos el storage ya que la partida ha terminado
+    // Borramos el storage ya que la partida ha terminado
     window.localStorage.removeItem('board')
     window.localStorage.removeItem('turn')
-  }  
+  }
 
   const updateBoard = (index) => {
-    //No actualizamos esta posición
-    //si ya tiene algo, así no sobrescribe la posición
-    if(board[index] || winner) return;
-    //Actualizar el tablero
+    // No actualizamos esta posición
+    // si ya tiene algo, así no sobrescribe la posición
+    if (board[index] || winner) return
+    // Actualizar el tablero
     const newBoard = [...board]
     newBoard[index] = turn
     setBoard(newBoard)
-    //Cambiar el turno
+    // Cambiar el turno
     const newTurn = turn === TURNS.X ? TURNS.O : TURNS.X
     setTurn(newTurn)
-    //guardar aquí la partida
+    // guardar aquí la partida
     window.localStorage.setItem('board', JSON.stringify(newBoard))
     window.localStorage.setItem('turn', newTurn)
-    //Revisar si hay ganador
+    // Revisar si hay ganador
     const newWinner = checkWinner(newBoard)
-    if(newWinner) {
+    if (newWinner) {
       confetti()
       setWinner(newWinner)
     } else if (checkEndGame(newBoard)) {
-      //si checkEndGame es true
-      //significa que ha llegado el final del juego
-      //pero no hay ganador => Empate
+      // si checkEndGame es true
+      // significa que ha llegado el final del juego
+      // pero no hay ganador => Empate
       setWinner(false)
     }
   }
 
   return (
     <>
-      <main className="board">
+      <main className='board'>
         <h1>Tic Tac Toe</h1>
-        <section className="game">
+        <section className='game'>
           {
             board.map((square, index) => {
               return (
@@ -77,7 +77,7 @@ function App() {
           }
 
         </section>
-        <section className="turn">
+        <section className='turn'>
           <Square
             isSelected={turn === TURNS.X}
           >
@@ -86,7 +86,7 @@ function App() {
           <Square
             isSelected={turn === TURNS.O}
           >
-              {TURNS.O}
+            {TURNS.O}
           </Square>
         </section>
 
