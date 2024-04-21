@@ -53,7 +53,12 @@
     <li>NO se puede utilizar hooks de React (useState, useEffect, useRef...) dentro de una condición 'if', ni de un loop, ya que pierde la posición. <- MUY mala práctica. SIEMPRE en el cuerpo del componente y si se necesita hacer condición se hace dentro del hook.</li>
     <li>localStorage -> Solo deja guardar un string, si queremos guardar en la memoria los datos de un array, transformamos esos datos en string con <code>JSON.stringify(laVariable)</code> y luego los podemos recuperar con <code>JSON.parse(laVariable)</code>.</li>    
     <li>De nuevo, <strong>IMPORTANTE: NUNCA</strong> alterar una variable que se recibe por propiedades entre componentes, ni los estados. Si es necesario alterar esos valores, hay que hacer una copia</li>
-    <li>useEffect.</li>
+  </ul>
+</ul>
+
+<h3>Lección 3 - Mouse Follower con useEffect: </h3>
+<ul>
+  <li>useEffect.</li>
     <ul>
       <li>Es un hook que queda observando el site y ejecuta el código cada vez que haya algún cambio en un componente/s o elemento/s que le asignemos y este se renderiza de nuevo, lo que implica que también se ejecuta la primera vez que se renderiza el componente (por ej. cuando se recarga la página).</li>
       <li>Es una función al que se le pasa dos parametros:</li>
@@ -62,10 +67,12 @@
         <li>El código a ejecutar cuando se detectan los cambios detonantes.</li>
         <li>Las "dependencias"(array), los cambios a detectar. No es obligatorio, si no se asigna, el código se ejecuta siempre que se renderice el componente, incluída la primera carga. Si solo queremos ejecutarlo en la primera vez: asignamos un array vacío.</li>
       </ul>
+      <li>Se puede tener más de un useEffect</li>
     </ul>
-  </ul>
+  <li>Nos estamos suscribiendo a un Event Listener de pointermove, que detecta el movimiento del punturo, al pulsar en el botón de desactivar el seguimiento, tenemos que quitar esa suscripción del evento para que se detenga.</li>
+  <li><strong>MUY UTIL:</strong> Una buena manera de comprobar los eventos activos, es lanzando en JS la línea: getEventListeners(window), y ver qué eventos están suscritos al window, esto puede ayudar a identificar problemas de rendimiento si se están ejecutando eventos cuando no los necesitamos y que se podrían parar.</li>
+  <li><strong>MUY UTIL:</strong> Extensión para navegadores <strong>React Tools</strong>, con él podemos inspeccionar en la pestaña de Componentes, los componentes del proyecto y sus propiedades y cambiarlas para hacer pruebas y tests.</li>
 </ul>
-
 
 
 
