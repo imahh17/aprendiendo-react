@@ -12,7 +12,7 @@
 <h3>Algunos de los pasos que he seguido para instalar distintos paquetes utilizados durante el curso: </h3>
 </ul>
     <li>Instalar paquete canvas para mostrar confeti, en el proyecto 02 juego 3 en raya: <code>npm install canvas-confetti -E</code></li>
-    <li>Instalar Linter -> Standard JS. <code>npm install standard -D</code> en raíz aprendiendo-react</li>
+    <li>Instalar Linter -> Standard JS. <code>npm install standard -D</code> en raíz aprendiendo-react. Configuramos VSCode para que el Linter haga el "fix on save".</li>
 </ul>
 
 <h3>Cosas que he repasado y aprendido en el curso: </h3>
