@@ -2,6 +2,9 @@
 <h1>Curso de repaso del framework React</h1>
 <h2>Monorepo con distintos proyectos</h2>
 
+<h3><strong>TODO: REPASAR FETCH, ASYNC Y PROMESAS
+</strong></h3>
+
 <h3>Algunos de los pasos que he seguido para crear cada proyecto: </h3>
 <ul>
     <li><code>npm init -y</code> -> Inicializa el proyecto y crea package.json en la raíz.</li>
@@ -30,6 +33,7 @@
     <li>SWC herramienta online donde se puede ver cómo lo traduce.</li>
   </ul>
   <li>Vite JS -> Empaquetador de aplicaciones web, con esto podemos hacer el build y lanzar el proyecto. Alternativas: Next.js o Astro.</li>
+  <li><strong>IMPORTANTE:</strong> en el return () de un componente, solo se puede renderizar un elemento, este puede contener tantos hijos como quieras.</li>
   <li>useState:</li>
   <ul>
     <li>Función Hook para control de los estados sobre los elementos.</li>
@@ -74,6 +78,16 @@
   <li><strong>MUY UTIL:</strong> Extensión para navegadores <strong>React Tools</strong>, con él podemos inspeccionar en la pestaña de Componentes, los componentes del proyecto y sus propiedades y cambiarlas para hacer pruebas y tests.</li>
 </ul>
 
+<h3>Lección 4 - Prueba técnica, llamadas a API: </h3>
+<ul>
+  <li>Si nos llevamos la lógica de nuestro componente a otro archivo para limpiarlo y este hacía cosas con los estados, nunca debemos mandarle el estado a esa función, el estado siempre se queda en el componente donde se asigna. Luego podemos cambiar el estado con lo que nos devuelva esa función externa</li>
+  <li>Muchas veces cuando vemos useEffect dentro de mismos componentes, hay que preguntarnos si realmente no sería mejor meterlos en un Custom Hook y separarlo del componente, e importar solo el hook al mismo. Queda más limpio y mejora rendimiento.</li>
+  
+  <li>Custom hooks: function useNombreHook</li>
+  <li>Diferencia entre una función normal y un custom hook: dentro de una función normal no podemos usar el resto de hooks y en la custom sí.</li>
+  <li><strong>Playwright para testear,</strong> a mi me ha fallado.</li>
+
+</ul>
 
 
   
