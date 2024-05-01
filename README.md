@@ -89,5 +89,30 @@
 
 </ul>
 
+<h3>Lección 5 - Prueba técnica, buscador de películas: </h3>
+<ul>
+  <li>useRef.</li>
+    <ul>
+      <li>Es un hook que permite crear una referencia a un elemento, esta referencia es mutable y persiste durante todo el ciclo de vida del componente.</li>
+      <li> Muy útil para guardar cualquier valor que quieras mutar y que cada vez que cambia NO vuelve a renderizar el componente.</li>
+    </ul>
+  <li>Para conseguir los datos de un form con el event onSubmit: Object.fromEntries(new window.FormData(event.target))</li>
+
+
+
+  <li>useMemo</li>
+    <ul>
+      <li>Puede parecer similar a useRef, la diferencia es que useMemo se utiliza para <strong>guardar el resultado de una función costosa de calcular, una función que si se ejecuta muchas veces, nos va a causar problemas de rendimiento</strong>; mientras que useRef se usa para guardar valores de un elemento.</li>
+      <li>Por ejemplo, al hacer un sort de las películas por título, como se llama a la función en la que se calcula esto cada vez que hay un onChange del input de texto, cada vez que se escribe una letra se renderiza. Para evitar esto podemos guardar el resultado del sort en el useMemo y que no se renderice más veces hasta que los valores cambien.</li>
+    </ul>
+  <li>useCallback</li>
+    <ul>
+      <li>Parecido al useMemo, pero: useMemo se utiliza para memorizar el resultado de una función costosa, mientras que useCallback se utiliza para memorizar la función en sí misma. Ambos son útiles para mejorar el rendimiento de tus aplicaciones.</li>
+    </ul>
+  <li>En la tarea de hacer que se hagan búsquedas según el usuario va escribiendo, hay un problema: Hay veces que las búsquedas mientras se está buscando son las que se muestran al final y eso es un error muy típico. Ej: al buscar 'Matrix', se acaban visualizando los resultados de 'Mat', porque esos resultados han tardado más en devolverse y han llegado en último lugar y son los últimos en mostrarse en lugar de 'Matrix'.</li> 
+  <ul>
+    <li><strong>Para evitar esto: Debounce.</strong></li>
+  </ul>
+</ul>
 
   
